@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  email: MyString
+  password_digest: MyString
+  join_method: 
+  is_active: 
+  user_type: 
+
+two:
+  email: MyString
+  password_digest: MyString
+  join_method: 
+  is_active: 
+  user_type: 
