@@ -3,9 +3,9 @@ class CreateUsers < ActiveRecord::Migration
     create_table :users do |t|
       t.string :email
       t.string :password_digest
-      t.int :join_method
-      t.int :is_active
-      t.int :user_type
+      t.integer :join_method
+      t.integer :is_active
+      t.integer :user_type
 
       t.timestamps
     end
