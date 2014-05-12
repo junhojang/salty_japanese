@@ -37,6 +37,8 @@ set :deploy_to, '/todpop/salty_japanise'
 namespace :deploy do
 
   desc 'Restart application'
+  run 'cd /todpop/salty_japanise/current'
+  run 'thin start'
   task :restart do
     on roles(:app), in: :sequence, wait: 5 do
       # Your restart mechanism here, for example:
