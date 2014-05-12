@@ -10,6 +10,7 @@
 #   http://dev.mysql.com/doc/refman/5.0/en/old-client.html
 #
 default: &default
+  host: localhost
   adapter: mysql2
   encoding: utf8
   pool: 5
@@ -27,7 +28,7 @@ development:
 test:
   <<: *default
   database: salty_japanise_test
-  password: !Xhemvkq*()
+
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
 # ever seen by anyone, they now have access to your database.
@@ -50,5 +51,3 @@ test:
 production:
   <<: *default
   database: salty_japanise_production
-  username: salty_japanise
-  password: !Xhemvkq*()
