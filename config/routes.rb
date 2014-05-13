@@ -1,5 +1,17 @@
 Rails.application.routes.draw do
   namespace :api do
+  get 'log_user_login/index'
+  end
+
+  namespace :api do
+  get 'learning_process/index'
+  end
+
+  namespace :api do
+  get 'user_info/index'
+  end
+
+  namespace :api do
   get 'user/index'
   end
 

@@ -1,0 +1,2 @@
+module Api::LogUserLoginHelper
+end

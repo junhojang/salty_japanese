@@ -41,11 +41,14 @@ namespace :deploy do
     on roles(:app), in: :sequence, wait: 5 do
       # Your restart mechanism here, for example:
       # execute :touch, release_path.join('tmp/restart.txt')
+
+      # find and kill previous thin process
       execute "ps -ef|grep thin|grep -v grep |awk '{print $2}'|xargs kill -9"
+      # start new rails server(thin) by daemon
       execute "cd /todpop/salty_japanise/current; rails s thin -d"
     end
   end
-
+ #
   after :publishing, :restart
 
   after :restart, :clear_cache do

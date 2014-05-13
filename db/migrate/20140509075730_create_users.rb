@@ -6,7 +6,6 @@ class CreateUsers < ActiveRecord::Migration
       t.integer :join_method
       t.integer :is_active
       t.integer :user_type
-
       t.timestamps
     end
   end
