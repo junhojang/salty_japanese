@@ -46,6 +46,8 @@ namespace :deploy do
       execute "ps -ef|grep thin|grep -v grep |awk '{print $2}'|xargs kill -9"
       # start new rails server(thin) by daemon
       execute "cd /todpop/salty_japanise/current; rails s thin -d"
+      # migrate db
+      execute "rake db:migrate"
     end
   end
  #
