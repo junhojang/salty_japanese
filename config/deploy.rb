@@ -45,7 +45,7 @@ namespace :deploy do
       # find and kill previous thin process
       execute "ps -ef|grep thin|grep -v grep |awk '{print $2}'|xargs kill -9"
       # start new rails server(thin) by daemon and db migrate
-      execute "cd /todpop/salty_japanise/current; rails s thin -d; rake db:migrate"
+      execute "cd /todpop/salty_japanise/current; rake db:migrate; rails s thin -d;"
     end
   end
  #

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  cpdm_id: 1
+  ad_type: 1
+  view_time: 1
+  dsc: MyString
+
+two:
+  user_id: 1
+  cpdm_id: 1
+  ad_type: 1
+  view_time: 1
+  dsc: MyString
